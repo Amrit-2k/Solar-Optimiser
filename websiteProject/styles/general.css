@@ -1,0 +1,13 @@
+
+  .background-display {
+    /* This style below will be inherited */  	
+    font-family: Roboto, Arial;
+    display: grid;
+    grid-template-rows: 1fr;
+  }
+
+html, body {
+    margin: 200;
+    height: 175%;
+}
+  
