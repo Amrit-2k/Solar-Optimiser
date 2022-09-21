@@ -1,44 +1,83 @@
 .menu{
-   
-    margin-right: 0;
-    margin-left: 0;
-    background-color:white;    
-    border-width: 5px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    height: 10%;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-width: 1px;
     border-style: solid;
-    border-color: rgb(139, 136, 136);
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;    
-       
-    display: grid;
-    grid-template-columns:1fr 2fr 1fr;
-    column-gap: 1px;
-    row-gap: 1px;
-    display: grid;
-    grid-template-rows:1fr;
-
-    padding: 1px;    
-    text-align: center;
-    text-size-adjust: auto;
-    font-size: 30px;
-
+    border-color: whitesmoke;
 }
 
 .date,.time {
     background-color: black;
-    padding:  10px;
-    color: blue;
-    border: 2px;
+    padding-top:  10px;
+    
+    border: 1px;
+    
     border-style: solid ;
-    border-color:grey;    
+    border-color:white;  
+
+    text-align: center;
+    font-size: 50px;
+    font-weight: 900;
+    color: green; 
 }
 
 .mode-select{
-    background-color: black;
-    padding:  10px;
-    color: green;
-    border: 2px;
+    background-color: black;       
+    border: 1px;
     border-style: solid ;
-    border-color:grey;    
+    border-color:white; 
+    position: relative;
+    display: inline-block;
+    top:0%;
+    width: 100%;    
+    overflow: hidden;  
+    text-size-adjust: auto;
+ 
 }
+
+.mode-select label{
+    cursor:pointer;
+    user-select: none;
+   
+}
+
+.mode-select label input[type="checkbox"]{
+    
+    display:none;
+   
+}
+.mode-select label span{
+    display: inline-block;
+    position: relative;
+    width: 100%;     
+    height: 100%;  
+    
+    color:white;
+    text-align: center;
+   
+}
+
+.mode-select label  input[type="checkbox"]:checked+ span:after { 
+    content: "AUTO";
+    color: green; 
+    font-size: 80px;
+    font-weight: 900;
+   
+}
+
+
+.mode-select label  input[type="checkbox"]+ span:after { 
+    content: "MANUAL";
+    color: red; 
+    font-size: 80px;
+    font-weight: 900;
+    
+}
+    
+
+
